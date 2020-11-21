@@ -1,3 +1,8 @@
+# Reacht Hooks Platzo
+
+React hooks practise project from Platzi course.
+By @helladyo
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
