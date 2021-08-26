@@ -1,5 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+}
+
+.Header {
+  display: inline-block;
+}
+
+.Characters {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.Character {
+  border: 1px solid #61dafb;
+  box-shadow: 8px 6px 4px rgba(31, 176, 202, 0.5);
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.Character-avatar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dark-mode {
+  background-color: darkslategrey;
+  color: #1fb0ca;
+}
+
+.light-mode {
+  background-color: #1fb0ca;
+  color: darkslategre;
+}
+
+button {
 }
 
 .App-logo {

@@ -1,13 +1,34 @@
-import './App.css';
+import { useState } from 'react';
 // components
 import Header from './components/Header';
+import Characters from './components/Characters';
+// Styles
+import './App.css';
+// For theming
+// Contexts
+import ThemeContext, { themes } from './context/ThemeContext';
 
 function App() {
+  // Theming state
+  const [theme, setTheme] = useState(themes.light);
+  // Handling theme change
+  const toggleTheme = () => {
+    setTheme(
+      (prevTheme) => prevTheme === themes.light ? 
+        themes.dark :
+        themes.light
+      );
+  }
   return (
-    <div className="App">
+    <ThemeContext.Provider value={{ theme, toggleTheme }} >
+    <div
+      className="App"
+      style={{ color: theme.foreground, backgroundColor: theme.background }}
+    >
       <Header />
-      <h1>React Hooks from Platzi!</h1>
+      <Characters />
     </div>
+    </ThemeContext.Provider>
   );
 }
 
